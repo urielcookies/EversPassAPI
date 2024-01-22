@@ -10,7 +10,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      ASPNETCORE_ENVIRONMENT: Production  # Set your desired environment (Development)
+      ASPNETCORE_ENVIRONMENT: Development  # Set your desired environment (Production/Development)
 
   postgres:
     image: postgres:13
