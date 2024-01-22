@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  everspassapi:
+    image: everspassapi
+    container_name: everspass-webserver
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production  # Set your desired environment (Development)
+
+  postgres:
+    image: postgres:13
+    container_name: everspass-postgres
+    environment:
+      POSTGRES_DB: everspassdb
+      POSTGRES_USER: everspassuser
+      POSTGRES_PASSWORD: everspasspw
+    ports:
+      - "5432:5432"
+
+# Add other services or configurations as needed

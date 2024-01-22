@@ -1,0 +1,6 @@
+@EversPassAPI_HostAddress = http://localhost:5258
+
+GET {{EversPassAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
