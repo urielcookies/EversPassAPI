@@ -29,5 +29,5 @@ services:
       POSTGRES_PASSWORD: everspasspw
     ports:
       - "5432:5432"
-
-# Add other services or configurations as needed
+    volumes:
+      - ./sql/01_create_tables.sql:/docker-entrypoint-initdb.d/01_create_tables.sql
